@@ -1,0 +1,47 @@
+import enum
+
+import numpy as np
+
+
+class RiskLevels(enum.Enum):
+    HIGH_LOW = 'HIGH_LOW'
+    HIGH_MEDIUM_LOW = 'HIGH_MEDIUM_LOW'
+
+    def get_centers(self) -> np.ndarray:
+        if self == RiskLevels.HIGH_LOW:
+            return np.array([1/3, 1/3*2])
+        else:
+            return np.array([1/6, 1/6*3, 1])
+
+
+METRIC_NAME_ACCURACY = 'Accuracy'
+METRIC_NAME_F1 = 'F1'
+METRIC_NAME_PRECISION = 'Precision'
+METRIC_NAME_RECALL = 'Recall'
+
+COORD_PERC_POINTS = 'Perc_Points'
+COORD_PERC_FEATURES = 'Perc_Features'
+
+KEY_COORD_Z_AVG = 'AVG'
+KEY_COORD_Z_STD = 'STD'
+KEY_COORD_PIPELINE_NAME = 'Pipe'
+
+KEY_PIPELINE_NAME = 'Pipe'
+KEY_PERC_DATA_POINTS = 'Perc_points'
+KEY_PERC_FEATURES = 'Perc_features'
+
+INFO_KEYS_SET = {KEY_PIPELINE_NAME, KEY_PERC_DATA_POINTS, KEY_PERC_FEATURES}
+INFO_KEY_LIST = [KEY_PIPELINE_NAME, KEY_PERC_DATA_POINTS, KEY_PERC_FEATURES]
+
+COORD_POISONED = 'Poisoned'
+COORD_LABEL = 'label'
+DG_IRRELEVANT_COLUMNS = {COORD_LABEL, COORD_POISONED}
+
+PREFIX_AVG = 'AVG'
+PREFIX_STD = 'STD'
+PREFIX_DELTA = 'DELTA'
+
+KEY_ATTR_POISONED: str = 'Poisoning'
+
+MONOLITHIC_VANILLA_PIPELINE_NAME = 'MONO_VANILLA'
+MONOLITHIC_ORACLED_PIPELINE_NAME = 'MONO_ORACLED'

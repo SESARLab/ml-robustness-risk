@@ -1,0 +1,76 @@
+{
+    "pipeline_files": [
+        // F3 - M2 boundary
+        {
+            "name": "$BASE_OUTPUT_DIRECTORY/F3/f3.1-m2-targeted-boundary-dt.jsonc",
+            "count_mono": true,
+            "count_oracle": true,
+            "filters": [
+                "TSUSC"
+            ]
+        },
+        // F3 - clustering
+        {
+            "name": "$BASE_OUTPUT_DIRECTORY/F3/f3.2-m2-targeted-clustering-dt.jsonc",
+            "count_mono": true,
+            "count_oracle": true,
+            "filters": [
+                "TSUSC"
+            ]
+        },
+        // F3 - SB boundary
+        {
+            "name": "$BASE_OUTPUT_DIRECTORY/F3/f3.1-sb-targeted-boundary-dt.jsonc",
+            "count_mono": true,
+            "count_oracle": true,
+            "filters": [
+                "TSUSC"
+            ]
+        },
+        // F3 - SB clustering
+        {
+            "name": "$BASE_OUTPUT_DIRECTORY/F3/f3.2-sb-targeted-clustering-dt.jsonc",
+            "count_mono": true,
+            "count_oracle": true,
+            "filters": [
+                "TSUSC"
+            ]
+        },
+        // F4 - M2 boundary
+        {
+            "name": "$BASE_OUTPUT_DIRECTORY/F4/f4.1-m2-targeted-boundary-dt.jsonc",
+            "count_mono": false,
+            "count_oracle": false,
+            "filters": [
+                "Dist.Bound+Dist.Clust+Group+Neigh.kDist"
+            ]
+        },
+        // F4 - M2 clustering
+        {
+            "name": "$BASE_OUTPUT_DIRECTORY/F4/f4.2-m2-targeted-clustering-dt.jsonc",
+            "count_mono": false,
+            "count_oracle": false,
+            "filters": [
+                "Dist.Bound+Dist.Clust+Group+Neigh.kDist"
+            ]
+        },
+        // F4 - SB boundary
+        {
+            "name": "$BASE_OUTPUT_DIRECTORY/F4/f4.1-sb-targeted-boundary-dt.jsonc",
+            "count_mono": false,
+            "count_oracle": false,
+            "filters": [
+                "Dist.Bound+Dist.Clust+Group+Neigh.kDist"
+            ]
+        },
+        // F4 - SB clustering
+        {
+            "name": "$BASE_OUTPUT_DIRECTORY/F4/f4.2-sb-targeted-clustering-dt.jsonc",
+            "count_mono": false,
+            "count_oracle": false,
+            "filters": [
+                "Dist.Bound+Dist.Clust+Group+Neigh.kDist"
+            ]
+        }
+    ]
+}
