@@ -85,12 +85,14 @@ The directory `Data` is organized as follows.
   - [`Data/F2/F2.2`](Data/F2/F2.2): results under attack `Clustering`
 - [`Data/F3`](Data/F3) contains the results of risk oracle and hash pipelines, and on pipelines composed of individual IoPs
 - [`Data/F4`](Data/F4) contains the results of *composed* risk pipelines
-- [`Data/FX_Benchmarks`](Data/FX_Benchmarks) contains the results of the performance (execution time) evaluation
+- [`Data/FX_Benchmarks`](Data/FX_Benchmarks) contains the results of the performance (execution time) evaluation.
 
 Each *results directory* except [`Data/FX_Benchmarks`](Data/FX_Benchmarks) follows the same organization (apart from sub-directories dividing results between the two attacks)
 
 - `Output`: contains the *main* results, retrieved by executing the *main* command in the provided code
 - `Additional`: contains the *post-processed* results, retrieved by further aggregating/plotting the results in `Output`.
+
+In addition to the aforementioned all-in-one scripts, additional script files are those that count the number of pipelines (according to what is discussed in the paper.)
 
 ### Main Results
 
